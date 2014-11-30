@@ -2,7 +2,6 @@ package nsccamp.sqliteplaying;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -35,7 +34,18 @@ public class MainActivity extends Activity {
 
         //TODO Use persistence to access database
 
-        Log.d("",persistence.readRows().get(0)[0]);
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 
