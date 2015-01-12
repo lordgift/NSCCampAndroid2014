@@ -2,10 +2,12 @@ package nsccamp.sqliteplaying;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import java.io.IOException;
+import java.util.List;
 
 import nsccamp.sqliteplaying.helper.DataBaseHelper;
 import nsccamp.sqliteplaying.persistence.Persistence;
@@ -35,15 +37,21 @@ public class MainActivity extends Activity {
         //TODO Use persistence to access database
 
 
+        List<String[]> row = persistence.readRows();
+        for(String[] column : row) {
+            for(String data : column) {
+                Log.d("DATA OUTPUT", data);
+            }
+        }
+
+//        String[] column = row.get(1);
+//        String data = column[1];
+//
+//        Log.d("DATA OUTPUT", data);
 
 
 
-
-
-
-
-
-
+        //Log.d("MainActivity", persistence.readRows().toString());
 
 
     }
